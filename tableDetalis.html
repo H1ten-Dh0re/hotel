@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
+    <title>Food Website</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  font-size: 55px;
+  color: coral;
+  font-family: Josefin Sans;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-left: 13%;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime-local"],
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  font-size: 20px;
+  margin-left: 0%;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+
+}
+
+input:invalid {
+  border-color: #e74c3c;
+}
+
+input:valid {
+  border-color: #2ecc71;
+}
+
+</style>
+<body>
+
+    <!-- desktop view -->
+    <div class="container" id="container">
+        <div id="menu">
+            <div class="title">
+                <img src="images/table/Logo.jpeg" alt="">
+            </div>
+            <div class="menu-item">
+                <a href="about.html">About</a>
+                <a href="#">Services</a>
+                <a href="yourorder.html">Your Orders</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <div class="details">
+            <h2>Reservation Details</h2>
+  <form id="reservationForm">
+    <label for="fullName">Your Name:</label>
+    <input type="text" id="fullName" name="fullName" required><br><br>
+
+    <label for="phoneNo">Phone Number:</label>
+    <input type="tel" id="phoneNo" name="phoneNo" pattern="[0-9]{10}" required><br><br>
+
+    <label for="numPersons">Number of Persons:</label>
+    <input type="number" id="numPersons" name="numPersons" min="1" required><br><br>
+
+    <label for="timeOfVisit">Time of Visit:</label>
+    <input type="datetime-local" id="timeOfVisit" name="timeOfVisit" required><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById('reservationForm');
+    
+        form.addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent default form submission
+    
+          // Show confirmation message
+          const isConfirmed = confirm('Table booked successfully!');
+          if (isConfirmed) {
+            // Redirect to index.html or your desired page
+            window.location.href = 'index.html';
+          }
+        });
+      </script>
+</body>
