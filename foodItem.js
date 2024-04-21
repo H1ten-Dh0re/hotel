@@ -399,6 +399,51 @@ const foodItem= [
     img: 'images/south indian/sambhar-vada.jpg',
     quantity: 1
 },
+{
+    id: 45,
+    name: 'Chapati',
+    category : 'breads',
+    rating: 4.3,
+    price: 12,
+    img: 'images/breads/chapati.jpeg',
+    quantity: 1
+},
+{
+    id: 46,
+    name: 'Tandoori Roti',
+    category : 'breads',
+    rating: 4.3,
+    price: 18,
+    img: 'images/breads/tandoori-roti.jpeg',
+    quantity: 1
+},
+{
+    id: 47,
+    name: 'Naan',
+    category : 'breads',
+    rating: 4.3,
+    price: 22,
+    img: 'images/breads/naan.jpeg',
+    quantity: 1
+},
+{
+    id: 48,
+    name: 'Garlic Naam',
+    category : 'breads',
+    rating: 4.3,
+    price: 25,
+    img: 'images/breads/garlic-naan.jpeg',
+    quantity: 1
+},
+{
+    id: 49,
+    name: 'Lachha Paratha',
+    category : 'breads',
+    rating: 4.3,
+    price: 25,
+    img: 'images/breads/lachha-paratha.jpeg',
+    quantity: 1
+}
 ]
 
 export {foodItem};
