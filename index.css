@@ -65,7 +65,7 @@ hr{
 .tab{
     position: sticky;
     height: 500px;
-    width: 800px;
+    width: 1000px;
     margin-left: 13%;
     margin-top: 2%;
     background: url(images/table/mainTable.png);
@@ -97,7 +97,7 @@ hr{
 }
 .tableBooking{
     height: 200px;
-    width: 700px;
+    width: 900px;
     background-color: whitesmoke;
     display: flex;
     align-items: center;
