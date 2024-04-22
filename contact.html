@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .contact-container{ 
+            background-color: #d3d1d1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contact-info{
+            /* border: 1px solid black; */
+            height: 80%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .contact-text{
+            text-align: center;
+            font-weight: bold;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 40px;
+        }
+        .card-container { 
+            height: 70%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        .common-card { 
+          
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            /* border: 3px solid black; */
+            height: 500px;
+            width: 350px;
+        }
+        .img-container { 
+            margin-top: 15px;
+            width:320px;
+            height:260px;
+        }
+        .card-text { 
+            font-weight: bold;
+        }
+        .card-info-container { 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            border: 1px dotted black;
+            /* border-style: dotted; */
+
+            width: 90.8%;
+        }
+    </style>
+</head>
+<body class="contact-container">
+    <div class="contact-info">
+        <h1 class="contact-text">Contact</h1>
+
+        <div class="card-container">
+            <div class="common-card">
+                <img src="./dhruv.jpg" alt="" class="img-container">
+                <div class="card-info-container">
+                    <p class="card-text">Dhruv Manoj Agrawal</p>
+                    <p class="card-text">22BCI0191</p>
+                    <p class="card-text">+91 7875115111</p>
+                    <p class="card-text">dhruv.manojagrawal2022@vitstudent.ac.in</p>
+                </div>
+            </div>
+            <div class="common-card">
+                <img src="./dhruv.jpg" alt="" class="img-container">
+
+            </div>
+            <div class="common-card">
+                <img src="./dhruv.jpg" alt="" class="img-container">
+
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
