@@ -474,7 +474,21 @@ function totalAmount(){
 }
 
 document.getElementById('cart-plus').addEventListener('click',cartToggle);
-document.getElementById('m-cart-plus').addEventListener('click',cartToggle);
+// document.getElementById('m-cart-plus').addEventListener('click',cartToggle);
+document.querySelector('.close-container').addEventListener('click', closeCart);
+
+function closeCart() {
+    if(cartData.length > 0){
+        document.getElementById('food-items').classList.toggle('food-items');
+        document.getElementById('category-list').classList.toggle('food-items');
+        document.getElementById('category-header').classList.toggle('toggle-category');
+        document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle')
+        document.getElementById('cart-page').classList.toggle('cart-toggle');
+        document.getElementById('checkout').classList.toggle('cart-toggle');
+        flag= true;
+        console.log(flag)
+    }
+}
 
 var flag= false;
 function cartToggle(){
@@ -487,11 +501,29 @@ function cartToggle(){
         document.getElementById('checkout').classList.toggle('cart-toggle');
         flag= true;
         console.log(flag)
+    } else { 
+        alert("Cart is empty!")
     }
-    else{
-        alert("Currently no item in cart!");
-    }
+  
 }
+
+// function clonecartToggle() {
+//     flag = false;
+    
+//         if(cartData.length > 0){
+//             document.getElementById('food-items').classList.toggle('food-items');
+//             document.getElementById('category-list').classList.toggle('food-items');
+//             document.getElementById('category-header').classList.toggle('toggle-category');
+//             document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle')
+//             document.getElementById('cart-page').classList.toggle('cart-toggle');
+//             document.getElementById('checkout').classList.toggle('cart-toggle');
+//             // document.getElementById('checkout').classList.toggle('cart-toggle')
+//             flag= true;
+//             console.log(flag)
+//         }
+      
+    
+// }
 
 
 

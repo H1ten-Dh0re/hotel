@@ -349,6 +349,21 @@ color: white;
     cursor: pointer;
     transition: all 0.5s;
 }
+
+.close-container{ 
+    outline: none;
+    border: none;
+    background: rgb(220, 20, 60);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    bottom: 30px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: all 0.5s;
+}
 .cart-btn:hover{
     transition: all 0.5s;
     background-color: rgb(128, 64, 64);
