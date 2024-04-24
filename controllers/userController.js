@@ -64,7 +64,12 @@ const userController = {
       catch(err){
         console.log(err);
       }
+    }, 
+    cartItem: async(req, res) => {
+      const value = req.body;
+      console.log(value);
     }
+
 };
 
 module.exports = userController;

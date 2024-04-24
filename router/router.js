@@ -12,4 +12,6 @@ router.post('/signIn', userController.signIn);
 
 router.post('/signUp', userController.signUp);
 
+router.post("/api/postData", userController.cartItem)
+
 module.exports = router;

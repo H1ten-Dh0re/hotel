@@ -228,13 +228,13 @@ hr{
     color: white;
     background: crimson;
 }
-#biryani,#paneer,#chicken,#vegetable,#chinese,#south-indian{
+#biryani,#paneer,#chicken,#vegetable,#chinese,#south-indian,#breads{
     margin-top: 80px;   /* defalut 40px */
 }
 #paneer #item-card,#vegetable #item-card{
     background: rgb(220, 243, 220);
 }
-#chinese #item-card,#south-indian #item-card{
+#chinese #item-card,#south-indian #item-card, #breads #item-card{
     background: #efe9e0;
 }
 #category-name,.item-menu{
@@ -336,6 +336,21 @@ color: white;
 }
 
 .cart-btn{
+    outline: none;
+    border: none;
+    background: rgb(220, 20, 60);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    bottom: 30px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.close-container{ 
     outline: none;
     border: none;
     background: rgb(220, 20, 60);

@@ -29,9 +29,7 @@
 
         <div id="food-container">
             <div id="header">
-                <!-- <div class="add-box">
-                    <i class="fa fa-map-marker your-address" id="add-address"> Your Address</i>
-                </div> -->
+    
                 <div class="util">
                     <i class="fa fa-search"> Search</i>
                     <i class="fa fa-tags"> Offers</i>
@@ -81,6 +79,9 @@
                 <div id="south-indian" class="d-south-indian">
                     <p id="category-name">South Indian</p>
                 </div>
+                <div id="breads" class="d-breads">
+                    <p id="category-name">Breads</p>
+                </div>
             </div>
 
             <div id="cart-page" class="cart-toggle">
@@ -98,7 +99,7 @@
                     </tbody>
                 </table>
                 <div class="btn-box">
-                    <button class="cart-btn" onclick='show()'>Checkout</button>
+                    <button class="close-container">Close</button>
                 </div>
             </div>
         </div>
@@ -117,14 +118,14 @@
             <div id="checkout" class="cart-toggle">
                 <p id="total-item">Total Item : 5</p>
                 <p id="total-price"></p>
-                <p id="delievery">Free delievery on Rs. 400</p>
+                <p id="delievery">Free delievery above Rs. 400</p>
                 <button class="cart-btn" onclick='show()'>Checkout</button>
             </div>
         </div>
     </div>
 
 
-    <!-- mobile view -->
+
     <div id="mobile-view" class="mobile-view">
         <div class="mobile-top">
             <div class="logo-box">
@@ -163,6 +164,9 @@
                 <div id="south-indian" class="m-south-indian">
                     <p id="category-name">South Indian</p>
                 </div>
+                <div id="breads" class="m - breads">
+                    <p id="category-name">Breads</p>
+                </div>
             </div>
         </div>
 
@@ -189,6 +193,10 @@
         var skip_count = 0;
         var skip_delay = 20;
         var speed = 80;
+
+        document.getElementById('circle').addEventListener('click', function() { 
+            window.location.href = "http://localhost:5173"
+        })
 
         function wordflick() {
             setInterval(function () {
@@ -235,6 +243,17 @@
                 window.location.href = 'tableDetalis.html';
             });
         }
+
+        // document.addEventListener('DOMContentLoaded', function () {
+    const closeButton = document.querySelector('.close-container');
+    const foodContainer = document.getElementById('food-container');
+    const cart = document.getElementById('cart');
+
+    closeButton.addEventListener('click', function () {
+        foodContainer.style.display = 'none';
+        cart.style.display = 'none';
+    // });
+});
     </script>
     <script src="/index.js" type="module"></script>
 </body>

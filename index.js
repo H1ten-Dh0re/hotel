@@ -7,7 +7,7 @@ function displayItems(){
     var vegetable=  document.getElementById('vegetable');
     var chinese=  document.getElementById('chinese');
     var southIndian=  document.getElementById('south-indian');
-
+    var bread=  document.getElementById('breads');
     
 
     const biryaniData= foodItem.filter((item)=>item.category=='biryani');
@@ -16,6 +16,7 @@ function displayItems(){
     const vegetableData= foodItem.filter((item)=>item.category=='vegetable');
     const chineseData= foodItem.filter((item)=>item.category=='chinese');
     const southData= foodItem.filter((item)=>item.category=='south indian');
+    const breadData= foodItem.filter((item)=>item.category=='breads');
     biryaniData.map(item=>{
         
         var itemCard= document.createElement('div');
@@ -265,7 +266,50 @@ function displayItems(){
         southIndian.appendChild(itemCard)
 
     })
+
+
+    breadData.map(item=>{
+        var itemCard= document.createElement('div');
+        itemCard.setAttribute('id','item-card')
+
+        var cardTop= document.createElement('div');
+        cardTop.setAttribute('id','card-top');
+
+        var star= document.createElement('i');
+        star.setAttribute('class','fa fa-star');
+        star.setAttribute('id','rating');
+        star.innerText= ' ' + item.rating;
+
+        var heart= document.createElement('i');
+        heart.setAttribute('class','fa fa-heart-o add-to-cart');
+        heart.setAttribute('id',item.id)
+        heart.innerText= 'Add to cart';
+
+        cardTop.appendChild(star);
+        cardTop.appendChild(heart);
+
+
+        var img= document.createElement('img');
+        img.src=item.img;
+
+        var itemName= document.createElement('p');
+        itemName.setAttribute('id','item-name');
+        itemName.innerText= item.name;
+
+        var itemPrice= document.createElement('p');
+        itemPrice.setAttribute('id','item-price');
+        itemPrice.innerText= 'Price : Rs. ' + item.price;
+
+        itemCard.appendChild(cardTop);
+        itemCard.appendChild(img);
+        itemCard.appendChild(itemName);
+        itemCard.appendChild(itemPrice);
+
+        bread.appendChild(itemCard)
+
+    })
 }
+
 displayItems();
 
 
@@ -430,7 +474,21 @@ function totalAmount(){
 }
 
 document.getElementById('cart-plus').addEventListener('click',cartToggle);
-document.getElementById('m-cart-plus').addEventListener('click',cartToggle);
+// document.getElementById('m-cart-plus').addEventListener('click',cartToggle);
+document.querySelector('.close-container').addEventListener('click', closeCart);
+
+function closeCart() {
+    if(cartData.length > 0){
+        document.getElementById('food-items').classList.toggle('food-items');
+        document.getElementById('category-list').classList.toggle('food-items');
+        document.getElementById('category-header').classList.toggle('toggle-category');
+        document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle')
+        document.getElementById('cart-page').classList.toggle('cart-toggle');
+        document.getElementById('checkout').classList.toggle('cart-toggle');
+        flag= true;
+        console.log(flag)
+    }
+}
 
 var flag= false;
 function cartToggle(){
@@ -443,11 +501,29 @@ function cartToggle(){
         document.getElementById('checkout').classList.toggle('cart-toggle');
         flag= true;
         console.log(flag)
+    } else { 
+        alert("Cart is empty!")
     }
-    else{
-        alert("Currently no item in cart!");
-    }
+  
 }
+
+// function clonecartToggle() {
+//     flag = false;
+    
+//         if(cartData.length > 0){
+//             document.getElementById('food-items').classList.toggle('food-items');
+//             document.getElementById('category-list').classList.toggle('food-items');
+//             document.getElementById('category-header').classList.toggle('toggle-category');
+//             document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle')
+//             document.getElementById('cart-page').classList.toggle('cart-toggle');
+//             document.getElementById('checkout').classList.toggle('cart-toggle');
+//             // document.getElementById('checkout').classList.toggle('cart-toggle')
+//             flag= true;
+//             console.log(flag)
+//         }
+      
+    
+// }
 
 
 
